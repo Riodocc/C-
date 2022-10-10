@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FB789D5B-C3A1-4ED8-8A5B-1BD53C4CA7BE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Project</RootNamespace>
+    <AssemblyName>Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\DiscountController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\FoodController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\RestaurantController.cs" />
+    <Compile Include="Controllers\ReviewController.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Admins.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Customers.cs" />
+    <Compile Include="Models\Database.cs" />
+    <Compile Include="Models\Discount.cs" />
+    <Compile Include="Models\Discouts.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Employees.cs" />
+    <Compile Include="Models\Food.cs" />
+    <Compile Include="Models\Foods.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Orders.cs" />
+    <Compile Include="Models\Restaurant.cs" />
+    <Compile Include="Models\Restaurants.cs" />
+    <Compile Include="Models\Review.cs" />
+    <Compile Include="Models\Reviews.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddingDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddingDiscount.Designer.cs">
+      <DependentUpon>AddingDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminPortal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminPortal.Designer.cs">
+      <DependentUpon>AdminPortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminReg.Designer.cs">
+      <DependentUpon>AdminReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AllDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AllDiscount.Designer.cs">
+      <DependentUpon>AllDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AllReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AllReview.Designer.cs">
+      <DependentUpon>AllReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerList.Designer.cs">
+      <DependentUpon>CustomerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerOrder.Designer.cs">
+      <DependentUpon>CustomerOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerPortal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerPortal.Designer.cs">
+      <DependentUpon>CustomerPortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerReg.Designer.cs">
+      <DependentUpon>CustomerReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmployeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EmployeeList.Designer.cs">
+      <DependentUpon>EmployeeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmployeeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EmployeeManagement.Designer.cs">
+      <DependentUpon>EmployeeManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmployeePortal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EmployeePortal.Designer.cs">
+      <DependentUpon>EmployeePortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FindRestaurant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FindRestaurant.Designer.cs">
+      <DependentUpon>FindRestaurant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FoodList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FoodList.Designer.cs">
+      <DependentUpon>FoodList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FoodManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FoodManagement.Designer.cs">
+      <DependentUpon>FoodManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FoodRegForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FoodRegForm.Designer.cs">
+      <DependentUpon>FoodRegForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerManagement.Designer.cs">
+      <DependentUpon>CustomerManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LoginInfo.Designer.cs">
+      <DependentUpon>LoginInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OrderHistory.Designer.cs">
+      <DependentUpon>OrderHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmployeeReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EmployeeReg.Designer.cs">
+      <DependentUpon>EmployeeReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Remove Food.cs" />
+    <Compile Include="Views\RemoveCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RemoveCustomer.Designer.cs">
+      <DependentUpon>RemoveCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RemoveDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RemoveDiscount.Designer.cs">
+      <DependentUpon>RemoveDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RemoveEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RemoveEmployee.Designer.cs">
+      <DependentUpon>RemoveEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RemoveFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RemoveFood.Designer.cs">
+      <DependentUpon>RemoveFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RemoveRestaurant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RemoveRestaurant.Designer.cs">
+      <DependentUpon>RemoveRestaurant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RestaurantList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RestaurantList.Designer.cs">
+      <DependentUpon>RestaurantList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RestaurantManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RestaurantManagement.Designer.cs">
+      <DependentUpon>RestaurantManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RestaurantRegForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RestaurantRegForm.Designer.cs">
+      <DependentUpon>RestaurantRegForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReviewRestaurant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ReviewRestaurant.Designer.cs">
+      <DependentUpon>ReviewRestaurant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SearchAdmin.Designer.cs">
+      <DependentUpon>SearchAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SearchCustomer.Designer.cs">
+      <DependentUpon>SearchCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SearchEmployee.Designer.cs">
+      <DependentUpon>SearchEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateCustomer.Designer.cs">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateEmployee.Designer.cs">
+      <DependentUpon>UpdateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateFood.Designer.cs">
+      <DependentUpon>UpdateFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateRestaurant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateRestaurant.Designer.cs">
+      <DependentUpon>UpdateRestaurant.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Resources\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddingDiscount.resx">
+      <DependentUpon>AddingDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminPortal.resx">
+      <DependentUpon>AdminPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminReg.resx">
+      <DependentUpon>AdminReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AllDiscount.resx">
+      <DependentUpon>AllDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AllReview.resx">
+      <DependentUpon>AllReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerList.resx">
+      <DependentUpon>CustomerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerOrder.resx">
+      <DependentUpon>CustomerOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerPortal.resx">
+      <DependentUpon>CustomerPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerReg.resx">
+      <DependentUpon>CustomerReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EmployeeList.resx">
+      <DependentUpon>EmployeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EmployeeManagement.resx">
+      <DependentUpon>EmployeeManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EmployeePortal.resx">
+      <DependentUpon>EmployeePortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FindRestaurant.resx">
+      <DependentUpon>FindRestaurant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FoodList.resx">
+      <DependentUpon>FoodList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FoodManagement.resx">
+      <DependentUpon>FoodManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FoodRegForm.resx">
+      <DependentUpon>FoodRegForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerManagement.resx">
+      <DependentUpon>CustomerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoginInfo.resx">
+      <DependentUpon>LoginInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderHistory.resx">
+      <DependentUpon>OrderHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EmployeeReg.resx">
+      <DependentUpon>EmployeeReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RemoveCustomer.resx">
+      <DependentUpon>RemoveCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RemoveDiscount.resx">
+      <DependentUpon>RemoveDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RemoveEmployee.resx">
+      <DependentUpon>RemoveEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RemoveFood.resx">
+      <DependentUpon>RemoveFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RemoveRestaurant.resx">
+      <DependentUpon>RemoveRestaurant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RestaurantList.resx">
+      <DependentUpon>RestaurantList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RestaurantManagement.resx">
+      <DependentUpon>RestaurantManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RestaurantRegForm.resx">
+      <DependentUpon>RestaurantRegForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReviewRestaurant.resx">
+      <DependentUpon>ReviewRestaurant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SearchAdmin.resx">
+      <DependentUpon>SearchAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SearchCustomer.resx">
+      <DependentUpon>SearchCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SearchEmployee.resx">
+      <DependentUpon>SearchEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UpdateCustomer.resx">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UpdateEmployee.resx">
+      <DependentUpon>UpdateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UpdateFood.resx">
+      <DependentUpon>UpdateFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UpdateRestaurant.resx">
+      <DependentUpon>UpdateRestaurant.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-western-food-gourmet-poster-background-template-image_135711.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\index.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foodCourt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tech-background-image-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\index1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\index2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16668.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beige-restaurant-background-vector-1878159.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurant-blurry-background-modern-hipster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1441032351_Young_background_education083115_03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\discount-background-sale-vector-9280811.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundcheck.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
